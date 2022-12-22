@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}KVCH Noida{% endblock title %}
+{% block header %}KVCH-Contact{% endblock header %}
+{% block pagecontent %}
+<h1>LOGIN</h1>
+{{msg}}
+<form action="loginuser" method="post">
+    {% csrf_token %}
+<center><fieldset id="loginbar"
+    <legend>login</legend>
+<table border=1>
+<tr>
+<th>E-mail</th>
+<td><input type="text" name="email" required /></td>
+</tr>
+<tr>
+    <th>Password</th>
+    <td><input type="text" name="password" required /></td>
+    </tr>
+<tr>
+    
+    <td colspan="2"><center><input type="submit" value="LOGIN" /></center></td>
+</tr>
+</table>
+</fieldset></center>
+
+</form>
+{% endblock pagecontent %}
+
+{% block footer %}Developed by UTKARSH{% endblock footer %}
